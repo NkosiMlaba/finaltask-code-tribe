@@ -1,0 +1,170 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+/* default */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* common */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+h1 {
+    font-size: 90px;
+    padding: none;
+    margin: none;
+    font-weight: 100;
+}
+
+#title-pink{
+    color: hsl(0, 36%, 70%);
+}
+
+#paragraph {
+    width: 100%;
+    color: hsl(0, 36%, 70%);
+}
+
+#form-container {
+    display: flex;
+}
+
+#form-div{
+    border-radius: 1rem;
+    border: 1px solid hsl(0, 36%, 70%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 20px;
+    align-items: center;
+    margin-top: 20px;
+
+    width: 30vw;
+    height: 30px;
+}
+
+input, form {
+    border: none;
+    outline: none;
+    padding-left: 20px;
+}
+
+#submit-div {
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-right: 0px;
+    width: 55px;
+    height: 45px;
+    background-color: hsl(0, 36%, 70%);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#submitButton {
+    background-color: hsl(0, 36%, 70%);
+    align-self: center;
+    
+}
+
+.hidden {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#message {
+    padding: 10px;
+}
+
+/* nav */
+/* Media query for landscape screens */
+@media screen and (min-width: 1000px) {
+    .desktop {
+        display: block; /* Hide on small screens */
+    }
+
+    .mobile {
+        display: none; /* Display on small screens */
+    }
+
+    .navbar {
+        flex-direction: row;
+        display: flex;
+    }
+
+    .content {
+        /* flex-direction: row; */
+        height: auto;
+        width: auto;
+        padding-top: 3vh;
+    }
+
+    #logo {
+        flex-basis: 70%;
+        padding-left: 10vw;
+        padding-top: 3vh;
+        padding-right: 5vw;
+    }
+
+    #main-picture {
+        flex-basis: 30%;
+        padding: none;
+        margin: none;
+        /* background-image: url("images/hero-desktop.jpg"); */
+    }
+
+    .picture-desktop {
+        width: 50vw;
+    }
+
+    
+
+
+}
+
+
+/* Media query for portrait screens */
+@media screen and (max-width: 999px) {
+    .desktop {
+        display: none; /* Hide on small screens */
+    }
+
+    .mobile {
+        display: block; /* Display on small screens */
+    }
+
+    #logo-image-mobile {
+        padding: 30px;
+    }
+
+    .picture-mobile {
+        width: 100vw;
+    }
+    #title, #form-container {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    #paragraph {
+        text-align: center;
+        width: 50%;
+    }
+
+}
+
+
+

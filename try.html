@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <style>
+        /* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo img {
+    max-width: 100px; /* Adjust based on your logo size */
+}
+
+/* Content styles */
+.content {
+    display: flex;
+    flex-direction: column; /* Default: Pictures stacked vertically */
+}
+
+.picture {
+    margin: 10px; /* Adjust spacing between pictures */
+}
+
+.picture img {
+    width: 100%;
+}
+
+/* Media query for landscape screens */
+@media screen and (min-width: 768px) {
+    .content {
+        flex-direction: row; /* Pictures side by side */
+    }
+
+    .navbar {
+        flex-direction: column; /* Navbar stacked vertically */
+    }
+}
+
+    </style>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="navbar-image.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <div>
+                <img src="picture1.jpg" alt="Picture 1">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Picture 1 -->
+        <div class="picture">
+            <img src="picture1.jpg" alt="Picture 1">
+        </div>
+        <!-- Picture 2 -->
+        <div class="picture">
+            <img src="picture2.jpg" alt="Picture 2">
+        </div>
+    </div>
+</body>
+</html>
