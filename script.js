@@ -62,11 +62,54 @@ function validateEmail() {
     }
 }
 
+
+
+
+
+
+function validateEmailMoblie() {
+    var email = document.getElementById('form-email-mobile').value;
+    var messageElement = document.getElementById('message-mobile');
+
+    var emailIcon = document.getElementById('emailIcons-mobile');
+    var container = document.getElementById('form-div-mobile');
+
+    // Regular expression for email validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailRegex.test(email)) {
+        // If email is valid, display "Good" message
+        messageElement.style.color = "hsl(0, 36%, 70%)";
+        messageElement.textContent = "Email sent";
+        emailIcon.innerHTML = "";
+        container.style.borderColor = "hsl(0, 36%, 70%)";
+        
+    } else {
+        // If email is invalid, display "Try again" message
+        messageElement.style.color = "red"
+        messageElement.textContent = "Please provide a valid email";
+        emailIcon.innerHTML = errorImage;
+        container.style.borderColor = "red";
+        
+        
+    }
+}
+
 document.getElementById('form-email').addEventListener('submit', function() {
     
     if (this.value !== '') {
         emailIcon.classList.remove('hidden');
     } else {
         emailIcon.classList.add('hidden');
+    }
+});
+
+
+document.getElementById('form-email-mobile').addEventListener('submit', function() {
+    
+    if (this.value !== '') {
+        emailIcon.classList.remove('hidden-mobile');
+    } else {
+        emailIcon.classList.add('hidden-mobile');
     }
 });
