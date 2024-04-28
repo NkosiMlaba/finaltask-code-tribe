@@ -14,7 +14,6 @@
 /* common */
 body {
     font-family: 'Josefin Sans', sans-serif;
-    
 }
 
 h1 {
@@ -86,17 +85,28 @@ input, form {
 
 #message {
     padding: 10px;
+    text-align: center;
 }
+
+#emailIcons {
+    padding-right: 10px;
+}
+
+#logo {
+    background-image: url(images/bg-pattern-desktop.svg);
+}
+
+
 
 /* nav */
 /* Media query for landscape screens */
 @media screen and (min-width: 1000px) {
     .desktop {
-        display: block; /* Hide on small screens */
+        display: block;
     }
 
     .mobile {
-        display: none; /* Display on small screens */
+        display: none;
     }
 
     .navbar {
@@ -129,23 +139,20 @@ input, form {
         width: 50vw;
     }
 
-    
-
-
 }
 
 
 /* Media query for portrait screens */
 @media screen and (max-width: 999px) {
     .desktop {
-        display: none; /* Hide on small screens */
+        display: none;
     }
 
     .mobile {
-        display: block; /* Display on small screens */
+        display: block; 
     }
 
-    #logo-image-mobile {
+    #logo-image {
         padding: 30px;
     }
 
@@ -161,7 +168,10 @@ input, form {
 
     #paragraph {
         text-align: center;
-        width: 50%;
+    }
+
+    #main-picture-2{
+        width: 100%;
     }
 
 }
